@@ -77,10 +77,14 @@ def get_item(stock, allow_new_item):
         print(f"{item_name} isn't in the stock")
 
 def get_value(Quantity):
-    value = input(Quantity)
-    value = int(value)
-    if value < 0:
+    while True:
+     value = input(Quantity)
+     value = int(value)
+     if value < 0:
         print("Value cann't be negative")
+        continue
+     break
+
     return int(value)
 
 def add_stock(stock):
